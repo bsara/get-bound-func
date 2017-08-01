@@ -37,24 +37,20 @@ $ npm install --save get-bound-func
 import getBoundFunc, { deleteBoundFuncs } from 'get-bound-func';
 
 
-
 class MyClass {
 
   constructor(msg) {
     this.val = msg;
   }
 
-
   onClick(e) {
     console.log(this.val);
   }
-
 
   registerOnClick(element) {
     element.addEventListener('click', getBoundFunc(this, this.onClick));
   }
 }
-
 
 
 const obj0 = new MyClass("Fish fingers and custard");
@@ -81,21 +77,17 @@ deleteBoundFuncs(obj1); // Clears all `obj1` bound functions from memory
 import getBoundFunc, { deleteBoundFuncs } from 'get-bound-func';
 
 
-
 function MyClass(msg) {
   this.val = msg;
 }
-
 
 MyClass.prototype.onClick = function(e) {
   console.log(this.val);
 }
 
-
 MyClass.prototype.registerOnClick = function(element) {
   element.addEventListener('click', getBoundFunc(this, this.onClick));
 }
-
 
 
 const obj0 = new MyClass("Fish fingers and custard");
