@@ -1,0 +1,20 @@
+root: true
+
+
+extends: '@bsara'
+
+parserOptions:
+  sourceType: module
+
+env:
+  amd:     true
+  browser: true
+  es6:     true
+  node:    true
+
+
+
+rules:
+  no-invalid-this: off
+  no-var: off
+  padding-line-between-statements: off

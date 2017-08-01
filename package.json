@@ -1,0 +1,48 @@
+{
+  "name": "get-bound-func",
+  "version": "1.0.0",
+  "description": "A tiny library that simplifies function binding and reduces unnecessary function binds",
+  "authors": [
+    "Brandon Sara (http://bsara.pro/)"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/bsara/get-bound-func#readme",
+  "repository": "bsara/get-bound-func",
+  "bugs": {
+    "url": "https://github.com/bsara/get-bound-func/issues"
+  },
+  "keywords": [
+    "bind",
+    "binding",
+    "bound",
+    "context",
+    "func",
+    "function",
+    "class",
+    "this"
+  ],
+  "files": [
+    "index.js",
+    "index.min.js",
+    "index.min.js.map"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "l": "npm run lint",
+    "lint": "npx eslint .",
+    "build": "npm run lint && npx uglifyjs index.js -o index.min.js --comments --compress --mangle --source-map",
+    "bump": "npm run bump:patch",
+    "bump:major": "npm --no-git-tag-version version major",
+    "bump:minor": "npm --no-git-tag-version version minor",
+    "bump:patch": "npm --no-git-tag-version version patch",
+    "postversion": "npx update-version-comment-refs && npx push-changed-version-files",
+    "prepublishOnly": "npm run lint && git push && npx tag-version",
+    "postpublish": "npm run bump"
+  },
+  "devDependencies": {
+    "@bsara/eslint-config": "^2.1.5",
+    "eslint": "^4.3.0",
+    "npm-scripts-versioning": "^1.0.0-beta.1",
+    "uglify-js": "^3.0.27"
+  }
+}
