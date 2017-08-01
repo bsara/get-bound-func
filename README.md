@@ -90,10 +90,10 @@ MyClass.prototype.registerOnClick = function(element) {
 }
 
 
-const obj0 = new MyClass("Fish fingers and custard");
-const obj1 = new MyClass(42);
+var obj0 = new MyClass("Fish fingers and custard");
+var obj1 = new MyClass(42);
 
-const myElement = document.getElementById('myElement');
+var myElement = document.getElementById('myElement');
 
 obj0.registerOnClick(myElement);
 obj1.registerOnClick(myElement);
