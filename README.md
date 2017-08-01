@@ -106,6 +106,11 @@ deleteBoundFuncs(obj0); // Clears all `obj0` bound functions from memory
 deleteBoundFuncs(obj1); // Clears all `obj1` bound functions from memory
 ```
 
+<br/>
+
+<p data-height="183" data-theme-id="dark" data-slug-hash="oeLZzo" data-default-tab="js,result" data-user="bsara" data-embed-version="2" data-pen-title="getBoundFunc Example" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/bsara/pen/oeLZzo/">getBoundFunc Example</a> by Brandon Sarà (<a href="https://codepen.io/bsara">@bsara</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 
 
 <br/>
@@ -175,3 +180,4 @@ PERFORMANCE OF THIS SOFTWARE.
 [bsara-home]: http://bsara.pro/
 [license]:    https://github.com/bsara/get-bound-func/blob/master/LICENSE "License"
 [npm]:        https://www.npmjs.com/package/get-bound-func                "NPM Package: get-bound-func"
+[codepen]:    https://codepen.io/bsara/pen/oeLZzo?editors=1011            "getBoundFunc Example"
