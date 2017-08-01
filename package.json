@@ -35,14 +35,14 @@
     "bump:major": "npm --no-git-tag-version version major",
     "bump:minor": "npm --no-git-tag-version version minor",
     "bump:patch": "npm --no-git-tag-version version patch",
-    "postversion": "npx update-version-comment-refs && npx push-changed-version-files",
+    "postversion": "npx update-version-comment-refs && npx push-version-comment-refs",
     "prepublishOnly": "npm run lint && git push && npx tag-version",
     "postpublish": "npm run bump"
   },
   "devDependencies": {
     "@bsara/eslint-config": "^2.1.5",
     "eslint": "^4.3.0",
-    "npm-scripts-versioning": "^1.0.0-beta.1",
+    "npm-scripts-versioning": "^1.0.0-beta.4",
     "uglify-js": "^3.0.27"
   }
 }
