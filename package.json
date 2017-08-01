@@ -1,6 +1,6 @@
 {
   "name": "get-bound-func",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny library that simplifies function binding and reduces unnecessary function binds",
   "authors": [
     "Brandon Sara (http://bsara.pro/)"
@@ -42,7 +42,7 @@
   "devDependencies": {
     "@bsara/eslint-config": "^2.1.5",
     "eslint": "^4.3.0",
-    "npm-scripts-versioning": "^1.0.0-beta.4",
+    "npm-scripts-versioning": "^1.0.0-beta.5",
     "uglify-js": "^3.0.27"
   }
 }
