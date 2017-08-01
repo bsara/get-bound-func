@@ -31,6 +31,10 @@ $ npm install --save get-bound-func
 
 # Usage
 
+#### [CodePen Example][codepen]
+
+<br/>
+
 #### Post-ES6
 
 ```js
@@ -105,13 +109,6 @@ myElement.click(); // Will output `Fish fingers and custard` and `42` to console
 deleteBoundFuncs(obj0); // Clears all `obj0` bound functions from memory
 deleteBoundFuncs(obj1); // Clears all `obj1` bound functions from memory
 ```
-
-<br/>
-
-#### CodePen Example
-
-<p data-height="183" data-theme-id="dark" data-slug-hash="oeLZzo" data-default-tab="js,result" data-user="bsara" data-embed-version="2" data-pen-title="getBoundFunc Example" class="codepen">See the Pen <a href="https://codepen.io/bsara/pen/oeLZzo/">getBoundFunc Example</a> by Brandon Sarà (<a href="https://codepen.io/bsara">@bsara</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 
 
