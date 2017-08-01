@@ -16,5 +16,6 @@ env:
 
 rules:
   no-invalid-this: off
+  no-multi-spaces: off
   no-var: off
   padding-line-between-statements: off

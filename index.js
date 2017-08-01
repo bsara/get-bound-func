@@ -26,7 +26,8 @@
     module.exports = factory();
     return;
   }
-  root.getBoundFunc = factory();
+  root.getBoundFunc     = factory();
+  root.deleteBoundFuncs = root.getBoundFunc.deleteBoundFuncs;
 })(this, function() {
 
   var _boundFuncs = new WeakMap();
