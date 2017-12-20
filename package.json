@@ -40,9 +40,9 @@
     "postpublish": "npm run bump"
   },
   "devDependencies": {
-    "@bsara/eslint-config": "^2.1.5",
+    "@bsara/eslint-config": "2.1.5",
     "eslint": "^4.3.0",
-    "npm-scripts-versioning": "^1.0.0-beta.5",
-    "uglify-js": "^3.0.27"
+    "npm-scripts-versioning": "^1.0.0-beta.8",
+    "uglify-js": "^3.2.2"
   }
 }

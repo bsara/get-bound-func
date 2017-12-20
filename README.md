@@ -35,7 +35,7 @@ $ npm install --save get-bound-func
 
 <br/>
 
-#### Post-ES6
+#### ES6 Modules
 
 ```js
 import getBoundFunc, { deleteBoundFuncs } from 'get-bound-func';
@@ -69,16 +69,18 @@ obj1.registerOnClick(myElement);
 myElement.click(); // Will output `Fish fingers and custard` and `42` to console
 
 
+// NOTE: It is NOT always required to call `deleteBoundFuncs`.
+// See API docs of `deleteBoundFuncs` for details.
 deleteBoundFuncs(obj0); // Clears all `obj0` bound functions from memory
 deleteBoundFuncs(obj1); // Clears all `obj1` bound functions from memory
 ```
 
 <br/>
 
-#### Pre-ES6
+#### CommonJS
 
 ```js
-import getBoundFunc, { deleteBoundFuncs } from 'get-bound-func';
+const getBoundFunc = rquire('get-bound-func');
 
 
 function MyClass(msg) {
@@ -106,8 +108,10 @@ obj1.registerOnClick(myElement);
 myElement.click(); // Will output `Fish fingers and custard` and `42` to console
 
 
-deleteBoundFuncs(obj0); // Clears all `obj0` bound functions from memory
-deleteBoundFuncs(obj1); // Clears all `obj1` bound functions from memory
+// NOTE: It is NOT always required to call `deleteBoundFuncs`.
+// See API docs of `deleteBoundFuncs` for details.
+getBoundFunc.deleteBoundFuncs(obj0); // Clears all `obj0` bound functions from memory
+getBoundFunc.deleteBoundFuncs(obj1); // Clears all `obj1` bound functions from memory
 ```
 
 
@@ -143,6 +147,17 @@ A version of `func` that is bound to `context`.
 ### deleteBoundFunc(*context*)
 
 Clears from memory all cached bound functions for the given `context`.
+
+> ***NOTE:*** It is not always required to use this function to clear cached bound
+> functions. Behind the scenes, [`WeakMaps`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+> are used to store the cached bound functions, therefore, whenever all other
+> references to the `context` object have been removed, the `context`'s corresponding
+> bound functions in the cache will automatically be cleared for you. However, this
+> function has been made available in the case that you want to manually clear the cache
+> so that memory is freed up sooner, or in instances where the `context` will not be
+> garbage collected.
+>
+> *For more information, refer to the [MDN documentation on `WeakMap`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#Why_WeakMap).*
 
 #### Parameters
 
