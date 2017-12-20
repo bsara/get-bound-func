@@ -1,6 +1,6 @@
 {
   "name": "get-bound-func",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A tiny library that simplifies function binding and reduces unnecessary function binds",
   "authors": [
     "Brandon Sara (http://bsara.pro/)"
